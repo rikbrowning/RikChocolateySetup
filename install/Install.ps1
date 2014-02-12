@@ -8,4 +8,4 @@ $dailyTrigger = New-JobTrigger -Daily -At "2:00 PM"
 Unregister-ScheduleJob -Name ChocolateyUpdate -Force
 Register-ScheduledJob -Name ChocolateyUpdate -ScriptBlock {cup all} -Trigger $dailyTrigger
 #install everything
-choco install all -source https://raw.github.com/rikbrowning/RikChocolateySetup/master/packages/packages.config
+'notepadplusplus.install','ConEmu','vim','virtualbox','githubforwindows','dropbox','paint.net','SkyDrive','googledrive','spotify' | %{ cinst $_ }
